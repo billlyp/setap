@@ -1,4 +1,6 @@
 Welcome to 7A's documentation!
+
+hello 123
 ===================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
