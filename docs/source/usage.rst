@@ -18,10 +18,10 @@ Every password is encrypted before stored into the database. Users can also logo
 * 3. **Login Button** - Once both the **username** and **passwords** are entered, click here to login. This will redirect you to the **dashboard page**.
 * 4. **Forgot Password** - Click here if you have forgotten your password.
 
-.. image:: images/login.png
+.. image:: image/loginpage.png
+
    :alt: image of login page
-   :width: 50%
-   :height: 50%
+   
 
 Dashboard
 ----------
@@ -35,10 +35,10 @@ It is the central hub of the application, and will display a brief summary of ev
 * 3. **Tasks Section** - This section will display the most recent tasks that the user has been assigned.
    #. Clicking on the Tasks Header will redirect the user to the tasks page.
 
-.. image:: images/dashboard.png
+.. image:: image/dashboard.png
+
    :alt: image of dashboard page
-   :width: 50%
-   :height: 50%
+   
 
 **Hovering over each section will display a brief summary of each of the contents of the pages.**
 
@@ -54,10 +54,9 @@ The live feed will display the most recent posts from all users within the compa
 * 2. **Post Button** - Once text has been inputted in the **Input Box**, Clicking post will send it to the live feed.
 * 3. **Live Feed** - This is where all the posts made by you and other users will be displayed.
 
-.. image:: images/livefeed.png
+.. image:: image/livefeed.png
    :alt: image of live feed page containing the post input box, post button and live feed itself.
-   :width: 100%
-   :height: 100%
+   
 
 Messaging
 ----------
@@ -72,8 +71,7 @@ Conversations will be displayed in a list to the left hand side of the chat box,
 * 4. **Message Input Box** - Click here to input text for your message.
 * 5. **Send Button** - Once text has been inputted in the **Message Input Box**, Clicking send will send it to the chat box.
 
-.. image:: images/messages.png
+.. image:: image/messages.png
    :alt: image of the messages page containing the chat box and the conversation list.
-   :width: 100%
-   :height: 100%
+   
 
