@@ -1,24 +1,16 @@
+===============================
 Welcome to 7A's documentation!
+===============================
 
-hello 123
-===================================
+**Work Wave** is a business-orientated social media app designed for employees to communicate with one another within their company.
 
-hello 123
-===================================
+Key features of the app:
+* **Profile and Authentication:** Employees can create a profile with their email and password. Passwords are secured using encryption.
+* **Dashboard:** Contains a brief summary of all the different tasks and activities.
+* **Live Feed:** Employees can post updates, such as text to the live feed, where other employees will be able to view.
+* **Messaging:** Employees can send direct messages to one another.
 
-hello 123
-===================================
-
-hello 123
-===================================
-
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Refer to :doc:`usage` for more detailed information on what the app can do.
 
 .. note::
 
@@ -28,8 +20,9 @@ Contents
 --------
 
 .. toctree::
-
+   :maxdepth: 2
+   :caption: Contents:
    usage
+   requirements
    api
-   hello
-   requirement
+ 
