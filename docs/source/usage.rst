@@ -5,18 +5,7 @@ Usage
 .. note::
    Update images/ usage (if there are new features) when the application is complete.
 
-.. _installation:
-
-Installation
-=====
-insert installation guide here
-
-.. code-block:: console
-
-   (.venv) $ insert installation guide here
-
-Core Features
-=====
+Below are the core features of this application, and how to use them:
 
 Profile and Authentication
 ----------
