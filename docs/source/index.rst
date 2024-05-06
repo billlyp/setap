@@ -11,7 +11,9 @@ Key features of the app:
 * **Live Feed:** Employees can post updates, such as text to the live feed, where other employees will be able to view.
 * **Messaging:** Employees can send direct messages to one another.
 
-Refer to :doc:`usage` for more detailed information on what the app can do.
+For installing the app: refer to :doc:`installation` for instructions on how to install the app.
+For usag: refer to :doc:`usage` for more detailed information on what the app can do.
+
 
 .. note::
 
@@ -26,5 +28,4 @@ Contents
    installation
    usage
    api
-   requirements
- 
+   

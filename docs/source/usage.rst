@@ -73,5 +73,5 @@ Conversations will be displayed in a list to the left hand side of the chat box,
 
 .. image:: image/messages.png
    :alt: image of the messages page containing the chat box and the conversation list.
-   
+
 
