@@ -18,7 +18,7 @@ init
         });
     }
 
-    Initalizes the dashboard page and sets up the event listeners for the live feed and messages buttons
+Initalizes the dashboard page and sets up the event listeners for the live feed and messages buttons
 
 
 displayLiveFeed
@@ -47,34 +47,34 @@ displayLiveFeed
         });
     }
 
-    **A detailed breakdown of the function:**
+**A detailed breakdown of the function:**
 
-    1. The function is called when the live feed button is clicked
+1. The function is called when the live feed button is clicked
     .. code-block:: javascript
         const liveFeed = document.querySelector('#liveFeed');
         liveFeed.addEventListener('click', () => {
 
-    2. The function fetches data from the server using the `/api/livefeed` endpoint
+ 2. The function fetches data from the server using the `/api/livefeed` endpoint
     .. code-block:: javascript
         fetch('/api/livefeed')
 
-    3. The response is converted to JSON format
+3. The response is converted to JSON format
     .. code-block:: javascript
         .then(response => response.json())
 
-    4. The data is logged to the console
+4. The data is logged to the console
     .. code-block:: javascript
         .then(data => {
             console.log('Live feed data:', data);
         })
 
-    5. If there is an error, it is logged to the console
+5. If there is an error, it is logged to the console
     .. code-block:: javascript
         .catch(error => {
             console.error('Error fetching live feed data:', error);
         });
 
-    6. The messages button is set up to redirect to the messages page when clicked
+6. The messages button is set up to redirect to the messages page when clicked
 
     .. code-block:: javascript
         const messages = document.querySelector('#messages');
