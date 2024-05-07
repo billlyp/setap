@@ -93,13 +93,13 @@ displayChat
             selectedChat = personCounter;
             logChat(personCounter);
           });
+            }
         }
-      }
     }
-  } catch (error) {
+    } catch (error) {
     console.error('Error generating person selectors:', error);
-  }
-}
+    }
+    }
 
 **A detailed breakdown of the function is as follows:**
 
@@ -114,88 +114,88 @@ displayChat
 
 2. The function iterates through the chat files and fetches chat data for each chat.
 
-        .. code-block:: javascript
-            for (let i = 0; i < chatFiles.length; i++) {
-            const personCounter = i + 1;
-            const chatData = await fetchChatData(personCounter);
+    .. code-block:: javascript
+        for (let i = 0; i < chatFiles.length; i++) {
+        const personCounter = i + 1;
+        const chatData = await fetchChatData(personCounter);
 
 3. The function checks if it should display the chat to the user based on comparing the userId client side and the senderId from the JSON data.
     
-        .. code-block:: javascript
-            const senderIds = chatData.map(message => message.senderId);
-            if (senderIds.includes(getUserId)) {
+    .. code-block:: javascript
+        const senderIds = chatData.map(message => message.senderId);
+        if (senderIds.includes(getUserId)) {
 
 4. The function checks if the current user's ID is included in the sender IDs.
     
-            .. code-block:: javascript
-                const uniqueSenderIds = [...new Set(senderIds)];
+    .. code-block:: javascript
+        const uniqueSenderIds = [...new Set(senderIds)];
 
 5. If the chat is a group chat (more than two participants), a new person selector element is created and appended to the contact list.
         
-            .. code-block:: javascript
-                if (uniqueSenderIds.length > 2) {
-                const newPerson = document.createElement("div");
-                newPerson.classList.add("personSelector");
+    .. code-block:: javascript
+        if (uniqueSenderIds.length > 2) {
+        const newPerson = document.createElement("div");
+        newPerson.classList.add("personSelector");
     
-                const nameElement = document.createElement("p");
-                const lastMsgElement = document.createElement("p");
+        const nameElement = document.createElement("p");
+        const lastMsgElement = document.createElement("p");
     
-                nameElement.id = "name";
-                lastMsgElement.id = "lastMessage";
+        nameElement.id = "name";
+        lastMsgElement.id = "lastMessage";
     
-                const senderNames = uniqueSenderIds.map(senderId => {
-                    const message = chatData.find(message => message.senderId === senderId);
-                    return message ? message.sender : "Unknown Sender";
-                });
+        const senderNames = uniqueSenderIds.map(senderId => {
+            const message = chatData.find(message => message.senderId === senderId);
+            return message ? message.sender : "Unknown Sender";
+        });
     
-                const concatenatedNames = senderNames.join(' + ');
-                nameElement.textContent = concatenatedNames;
+        const concatenatedNames = senderNames.join(' + ');
+        nameElement.textContent = concatenatedNames;
     
-                newPerson.appendChild(nameElement);
-                newPerson.appendChild(lastMsgElement);
+        newPerson.appendChild(nameElement);
+        newPerson.appendChild(lastMsgElement);
     
-                contact.appendChild(newPerson);
+        contact.appendChild(newPerson);
                     
-                newPerson.addEventListener('click', function() {
-                    selectedChat = personCounter;
-                    logChat(personCounter);
-                });
-                }
+        newPerson.addEventListener('click', function() {
+            selectedChat = personCounter;
+            logChat(personCounter);
+        });
+        }
 
 6. If the chat is a one-on-one chat, the other sender's data is extracted and a new person selector element is created and appended to the contact list.
     
-                .. code-block:: javascript
-                    else if (uniqueSenderIds.length === 2) {
-                    const otherSender = uniqueSenderIds.find(senderId => senderId !== getUserId);
-                    const otherSenderData = chatData.find(message => message.senderId === otherSender);
+    .. code-block:: javascript
+        else if (uniqueSenderIds.length === 2) {
+        const otherSender = uniqueSenderIds.find(senderId => senderId !== getUserId);
+        const otherSenderData = chatData.find(message => message.senderId === otherSender);
                     
-                    const newPerson = document.createElement("div");
-                    newPerson.classList.add("personSelector");
+        const newPerson = document.createElement("div");
+        newPerson.classList.add("personSelector");
                     
-                    const nameElement = document.createElement("p");
-                    const lastMsgElement = document.createElement("p");
+        const nameElement = document.createElement("p");
+        const lastMsgElement = document.createElement("p");
                     
-                    nameElement.id = "name";
-                    lastMsgElement.id = "lastMessage";
+        nameElement.id = "name";
+        lastMsgElement.id = "lastMessage";
                     
-                    nameElement.textContent = otherSenderData ? otherSenderData.sender : "Unknown Sender";
+        nameElement.textContent = otherSenderData ? otherSenderData.sender : "Unknown Sender";
                     
-                    newPerson.appendChild(nameElement);
-                    newPerson.appendChild(lastMsgElement);
+        newPerson.appendChild(nameElement);
+        newPerson.appendChild(lastMsgElement);
                     
-                    contact.appendChild(newPerson);
+        contact.appendChild(newPerson);
                         
-                    newPerson.addEventListener('click', function() {
-                        selectedChat = personCounter;
-                        logChat(personCounter);
-                    });
-                    }
+        newPerson.addEventListener('click', function() {
+            selectedChat = personCounter;
+            logChat(personCounter);
+        });
+        }
 7. If there is an error, it is logged to the console.
     
-        .. code-block:: javascript
-            } catch (error) {
-            console.error('Error generating person selectors:', error);
-            }
+    .. code-block:: javascript
+        } catch (error) {
+        console.error('Error generating person selectors:', error);
+        }
 
 
 
