@@ -55,7 +55,7 @@ displayLiveFeed
         const liveFeed = document.querySelector('#liveFeed');
         liveFeed.addEventListener('click', () => {
 
- 2. The function fetches data from the server using the `/api/livefeed` endpoint
+2. The function fetches data from the server using the `/api/livefeed` endpoint
 
     .. code-block:: javascript
         fetch('/api/livefeed')
