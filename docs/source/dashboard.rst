@@ -23,29 +23,29 @@ Initalizes the dashboard page and sets up the event listeners for the live feed 
 
 displayLiveFeed
 ----------------
-.. code-block:: javascript
+    .. code-block:: javascript
 
-    function displayLiveFeed() {
-        const liveFeed = document.querySelector('#liveFeed');
-        liveFeed.addEventListener('click', () => {
-            // Fetch data from the server
-            fetch('/api/livefeed')
-            .then(response => response.json())
-            .then(data => {
-                // Update the dashboard with the fetched data
-                // Replace the following code with your logic to update the dashboard
-                console.log('Live feed data:', data);
-            })
-            .catch(error => {
-                console.error('Error fetching live feed data:', error);
+        function displayLiveFeed() {
+            const liveFeed = document.querySelector('#liveFeed');
+            liveFeed.addEventListener('click', () => {
+                // Fetch data from the server
+                fetch('/api/livefeed')
+                .then(response => response.json())
+                .then(data => {
+                    // Update the dashboard with the fetched data
+                    // Replace the following code with your logic to update the dashboard
+                    console.log('Live feed data:', data);
+                })
+                .catch(error => {
+                    console.error('Error fetching live feed data:', error);
+                });
             });
-        });
 
-        const messages = document.querySelector('#messages');
-        messages.addEventListener('click', () => {
-            window.location.href = '../messages';
-        });
-    }
+            const messages = document.querySelector('#messages');
+            messages.addEventListener('click', () => {
+                window.location.href = '../messages';
+            });
+        }
 
 **A detailed breakdown of the function:**
 
