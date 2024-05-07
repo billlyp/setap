@@ -28,5 +28,8 @@ Contents
    
    installation
    usage
+   dashboard
+   livefeed
    messages
+   
    

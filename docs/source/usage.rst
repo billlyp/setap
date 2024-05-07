@@ -57,7 +57,7 @@ The live feed will display the most recent posts from all users within the compa
 .. image:: image/livefeed.png
    :alt: image of live feed page containing the post input box, post button and live feed itself.
    
-----------
+
 Messaging
 ----------
 Users will be able to send messages to their collegues. The messages will be displayed in a chat-like format, with the most recent messages appearing at the bottom of the chat box.
