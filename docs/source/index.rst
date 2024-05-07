@@ -20,12 +20,13 @@ For usag: refer to :doc:`usage` for more detailed information on what the app ca
    This project is under active development.
 
 Contents
+
 --------
 
 .. toctree::
    :maxdepth: 2
-
+   
    installation
    usage
-   api
+   messages
    

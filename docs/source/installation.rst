@@ -8,13 +8,12 @@ Once downloaded, connect to the folder using the terminal.
 
 .. code-block:: console
 
-   (.venv) $ cd /path/to/folder/setapcw
+   cd /path/to/folder/setapcw
 
 Then, install the requirements using the following command:
 
 .. code-block:: console
-
-   (.venv) $ npm i
+   npm i
 
 to install the required node packages.
 
@@ -22,8 +21,7 @@ Then run:
 
 .. code-block:: console
 
-   (.venv) $ node svr.js
-
+   node svr.js
 
 And the server will be running on port 8080, so open your browser of choice and go to:
 
