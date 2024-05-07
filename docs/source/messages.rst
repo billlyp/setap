@@ -256,35 +256,37 @@ fetchChatData
 
 clearChatHistory
 ---------------------
-    .. code-block:: javascript
-        /**
-         * Clears the chat history.
-         * 
-         * @function clearChatHistory
-         * @example
-         * // Example usage:
-         * clearChatHistory();
-         */
-        function clearChatHistory() {
-            const chatMessageHistory = document.getElementById("chatMessageHistory");
-            chatMessageHistory.innerHTML = "";
-        }
+.. code-block:: javascript
+
+    /**
+     * Clears the chat history.
+     * 
+     * @function clearChatHistory
+     * @example
+     * // Example usage:
+     * clearChatHistory();
+     */
+    function clearChatHistory() {
+        const chatMessageHistory = document.getElementById("chatMessageHistory");
+        chatMessageHistory.innerHTML = "";
+    }
 
 youAreLoggedInAs
 ------------------
-    .. code-block:: javascript
-        /**
-         * Displays the current user's name in the chat.
-         * 
-         * @function youAreLoggedInAs
-         * @example
-         * // Example usage:
-         * youAreLoggedInAs();
-         */
-        function youAreLoggedInAs() {
-            const loggedInAs = document.getElementById('loggedInAs');
-            loggedInAs.textContent = 'Logged in as: ' + getUserName;
-        }
+.. code-block:: javascript
+
+    /**
+     * Displays the current user's name in the chat.
+     * 
+     * @function youAreLoggedInAs
+     * @example
+     * // Example usage:
+     * youAreLoggedInAs();
+     */
+    function youAreLoggedInAs() {
+        const loggedInAs = document.getElementById('loggedInAs');
+        loggedInAs.textContent = 'Logged in as: ' + getUserName;
+    }
 
 buildMessageHistory
 -------------------
