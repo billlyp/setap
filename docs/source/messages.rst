@@ -290,52 +290,54 @@ youAreLoggedInAs
 
 buildMessageHistory
 -------------------
-    .. code-block:: javascript
-        /**
-         * Builds the message history.
-         * 
-         * @function buildMessageHistory
-         * @example
-         * // Example usage:
-         * buildMessageHistory();
-         */
-        function buildMessageHistory(chatData) {
-            const chatMessageHistory = document.getElementById("chatMessageHistory");
-            const theirMessageClassName = 'theirMessage';
-            const yourMessageClassName = 'yourMessage';
-            let isGroupChat = false;
+.. code-block:: javascript
 
-  
-            if (chatData.length > 0 && chatData[0].text === '') {
-                isGroupChat = true;
-            }
+    /**
+     * Builds the message history.
+     * 
+     * @function buildMessageHistory
+     * @example
+     * // Example usage:
+     * buildMessageHistory();
+     */
+    function buildMessageHistory(chatData) {
+        const chatMessageHistory = document.getElementById("chatMessageHistory");
+        const theirMessageClassName = 'theirMessage';
+        const yourMessageClassName = 'yourMessage';
+        let isGroupChat = false;
 
-            if (chatData.length === 0) {
-                return;
-            } 
 
-            let identifierMessageCount = 0;
-            for (let i = 0; i < chatData.length; i++) {
-                const message = chatData[i];
-    
-                if (isGroupChat && message.text === '') {
-                identifierMessageCount++;
-                continue;
-                }
-    
-                if (!isGroupChat && identifierMessageCount < 2) {
-                  identifierMessageCount++;
-                  continue;
-                }
-    
-                //if user id is the same as the sender id, then give the message the class of yourMessage, else give it the class of theirMessage
-                const messageClass = message.senderId === getUserId ? yourMessageClassName : theirMessageClassName;
-                //same here, except it will display 'You' if the sender id matches
-                const senderName = message.senderId === getUserId ? 'You' : message.sender;
-                const newMessage = createMessageElement(senderName, message.text, message.timestamp, messageClass);
-                chatMessageHistory.appendChild(newMessage);
-            }
+        if (chatData.length > 0 && chatData[0].text === '') {
+            isGroupChat = true;
         }
+
+        if (chatData.length === 0) {
+            return;
+        } 
+
+        let identifierMessageCount = 0;
+        for (let i = 0; i < chatData.length; i++) {
+            const message = chatData[i];
+
+            if (isGroupChat && message.text === '') {
+            identifierMessageCount++;
+            continue;
+            }
+
+            if (!isGroupChat && identifierMessageCount < 2) {
+              identifierMessageCount++;
+              continue;
+            }
+
+            //if user id is the same as the sender id, then give the message the class of yourMessage, else give it the class of theirMessage
+            const messageClass = message.senderId === getUserId ? yourMessageClassName : theirMessageClassName;
+            //same here, except it will display 'You' if the sender id matches
+            const senderName = message.senderId === getUserId ? 'You' : message.sender;
+            const newMessage = createMessageElement(senderName, message.text, message.timestamp, messageClass);
+            chatMessageHistory.appendChild(newMessage);
+        }
+    }
+
 **A detailed breakdown of the function is as follows:**
 
 1. Initalizes variables.
