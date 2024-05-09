@@ -31,15 +31,12 @@ It is the central hub of the application, and will display a brief summary of ev
    #. Clicking on the Live Feed Header will redirect the user to the live feed page.
 * 2. **Messages Section** - This section will display the most recent messages from collegues.
    #. Clicking on the Messages Header will redirect the user to the messaging page.
-* 3. **Tasks Section** - This section will display the most recent tasks that the user has been assigned.
-   #. Clicking on the Tasks Header will redirect the user to the tasks page.
+
 
 .. image:: image/dashboard.png
    :alt: image of dashboard page
    
-
-**Hovering over each section will display a brief summary of each of the contents of the pages.**
-
+   
 By clicking on:
 * **Live Feed** - users will be redirected to the live feed page.
 * **Messages** - users will be redirected to the messaging page.
