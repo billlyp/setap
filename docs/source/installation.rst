@@ -32,4 +32,5 @@ Now you can start using the application.
 
 
 .. note::
+   
    If there are errors when running the tests, run the following command: ``npm i`` which will install the required packages for the tests to run. 
