@@ -6,13 +6,14 @@ Welcome to 7A's documentation!
 
 Key features of the app:
 
-* **Profile and Authentication:** Employees can create a profile with their email and password. Passwords are secured using encryption.
 * **Dashboard:** Contains a brief summary of all the different tasks and activities.
 * **Live Feed:** Employees can post updates, such as text to the live feed, where other employees will be able to view.
 * **Messaging:** Employees can send direct messages to one another.
 
 For installing the app: refer to :doc:`installation` for instructions on how to install the app.
-For usag: refer to :doc:`usage` for more detailed information on what the app can do.
+For usage: refer to :doc:`usage` for more detailed information on what the app can do.
+
+For developers: refer to :doc:`dashboard`, :doc:`livefeed`, and :doc:`messages` for more detailed information on the different components of the app.
 
 
 .. note::
@@ -25,7 +26,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   
+   index
    installation
    usage
    dashboard

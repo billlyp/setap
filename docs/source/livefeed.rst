@@ -397,4 +397,4 @@ createPost
         postBox.appendChild(postContent);
 
         feed.appendChild(postBox);
-    }
+        }

@@ -3,7 +3,7 @@ Usage
 ==========
 
 .. note::
-   Update images/ usage (if there are new features) when the application is complete.
+
 
 Below are the core features of this application, and how to use them:
 
@@ -11,7 +11,7 @@ Profile and Authentication
 ----------
 
 Initially, users will arrive at the login page that will ask for their **username** and **password**. Succesfully entering the correct username and password on the associated fields will redirect the user to the dashboard page and will log them in.
-Every password is encrypted before stored into the database. Users can also logout of their account.
+
 
 * 1. **Username Input Box** - Enter your **username** here.
 * 2. **Password Input Box** - Enter your **password** here.
@@ -19,7 +19,6 @@ Every password is encrypted before stored into the database. Users can also logo
 * 4. **Forgot Password** - Click here if you have forgotten your password.
 
 .. image:: image/loginpage.png
-
    :alt: image of login page
    
 
@@ -36,7 +35,6 @@ It is the central hub of the application, and will display a brief summary of ev
    #. Clicking on the Tasks Header will redirect the user to the tasks page.
 
 .. image:: image/dashboard.png
-
    :alt: image of dashboard page
    
 
